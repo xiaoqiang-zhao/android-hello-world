@@ -2,4 +2,5 @@
     <string name="app_name">小强赵(App title)</string>
     <string name="action_settings">Settings</string>
     <string name="action_settings2">Settings 2</string>
+    <string name="edit_message">文本</string>
 </resources>

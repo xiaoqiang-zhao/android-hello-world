@@ -20,18 +20,9 @@ public class MainActivity extends AppCompatActivity {
         // 设置主屏 view
         setContentView(R.layout.activity_main);
         // 顶部工具条
-        Toolbar toolbar = findViewById(R.id.toolbar);
+         Toolbar toolbar = findViewById(R.id.toolbar);
         // 将 menu 注入到 toolbar
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+         setSupportActionBar(toolbar);
     }
 
     @Override
