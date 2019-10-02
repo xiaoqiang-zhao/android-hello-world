@@ -18,6 +18,7 @@ import android.widget.TextView;
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
+    public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,20 +54,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /** Called when the user clicks the Send button */
+    /** Called when the user clicks the Search button */
     public void search(View view) {
-        // Do something in response to button
-
+        // 获取输入框组件
         EditText editText = (EditText) findViewById(R.id.searchInputEditText);
+        // 获取输入的字符串
         String message = editText.getText().toString();
 
         // 写入到第一个文本组件中
         TextView textView1 = (TextView) findViewById(R.id.textView1);
         textView1.setText(message);
 
-         Intent intent = new Intent(this, DisplayMessageActivity.class);
-         intent.putExtra(EXTRA_MESSAGE, message);
-         startActivity(intent);
+        // 实例化一个 Intent 对象，指定要跳转到的页面
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        // 跳转到指定页面
+        startActivity(intent);
     }
 
 }
